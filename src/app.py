@@ -10,7 +10,11 @@
 #     II) ConsoleApp
 #    	Instalar el paquete
 
-from temp_scale import TemperatureScale
+import enum
+class TemperatureScale(enum.Enum):
+    C = "Celcius"
+    F = "Fahrenheit"
+    K = "Kelvin"
 
 
 class Temperature:
@@ -29,10 +33,10 @@ class Temperature:
     
     def to_k(self):
         if(self.type == TemperatureScale.C):
-            return round(self.value + 273.15)
+            return round(self.value + 273.15, 2)
 
         elif(self.type == TemperatureScale.F):
-            return 273.5 + ((self.value - 32.0) * (5.0/9.0))
+            return round(273.15 + ((self.value - 32.0) * (5.0/9.0)), 2)
 
         return self.value
     
