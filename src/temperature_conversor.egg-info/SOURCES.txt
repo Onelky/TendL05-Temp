@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/temperature_conversor.egg-info/PKG-INFO
+src/temperature_conversor.egg-info/SOURCES.txt
+src/temperature_conversor.egg-info/dependency_links.txt
+src/temperature_conversor.egg-info/top_level.txt
